@@ -1,6 +1,8 @@
 <!-- PROJECT DESCRIPTION -->
 
-# <a name="about-project">VetClinic</a>
+# <a name="about-project"> 🐖 VetClinic 🐒 </a>
+
+<a href="https://ibb.co/w0HNxL5"><img src="https://i.ibb.co/QbBF1cy/db-queries.png" alt="db-queries" border="0"></a>
 
 This project is a database system for a vet clinic. The database includes tables to store information about animals, their owners, clinic employees, and visits. The goal is to design a comprehensive database structure that enables efficient management and organization of data related to the clinic's operations and patient care.
 
@@ -8,17 +10,13 @@ This project is a database system for a vet clinic. The database includes tables
 
 # Table of Contents
 
-- [🛠 Built With](#built-with)
+- [Built With](#built-with)
   - [Tech Stack](#tech-stack)
   - [Key Features](#key-features)
-- [Live Demo](#live-demo)
 - [Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
-  - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [Authors](#authors)
 - [Future Features](#future-features)
 - [Contributing](#contributing)
@@ -26,7 +24,7 @@ This project is a database system for a vet clinic. The database includes tables
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 
-## 🛠 Built With <a name="built-with"></a>
+## Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -66,15 +64,21 @@ Determine the appropriate installation method for your operating system. Postgre
 
 1. For Linux:
 
-> sudo apt-get install postgresql
+```
+sudo apt-get install postgresql
+```
 
 or
 
-> sudo yum install postgresql-server
+```
+sudo yum install postgresql-server
+```
 
 or
 
-> sudo dnf install postgresql-server postgresql-contrib
+```
+sudo dnf install postgresql-server postgresql-contrib
+```
 
 Other distributions: Refer to the PostgreSQL documentation or consult your distribution's documentation for installation instructions.
 
@@ -86,10 +90,11 @@ PostgreSQL Installer for Windows: Download the PostgreSQL Installer for Windows 
 
 Homebrew: If you have Homebrew installed, use the following command:
 
-> brew install postgresql
+```
+brew install postgresql
+```
 
 PostgreSQL for macOS: Download the PostgreSQL package for macOS from the official website and follow the installation instructions.
-
 
 During the installation process, you may be prompted to provide a password for the default PostgreSQL superuser (postgres). Choose a strong password and remember it for future use.
 After the installation is complete, PostgreSQL should be up and running as a service on your system. You can start and stop the service using the provided tools or by using the system services manager.
@@ -101,21 +106,29 @@ Once PostgreSQL is installed, you can access it using the psql command-line tool
 To get a local copy up and running, follow these steps.
 Choose the directory on your local machine where you want to copy project. For example:
 
-> cd /home/user/name-of-your-directory
+```
+cd /home/user/name-of-your-directory
+```
 
 Clone the project using one of the options.
 
 Using SSH-key:
 
-> git clone git@github.com:romans-adi/vet-clinic.git
+```
+git clone git@github.com:romans-adi/vet-clinic.git
+```
 
 Using HTTPS:
 
-> git clone https://github.com/romans-adi/vet-clinic.git
+```
+git clone https://github.com/romans-adi/vet-clinic.git
+```
 
 You can also create the new directory just adding the name of it in the end of command. For example:
 
-> git clone https://github.com/romans-adi/vet-clinic.git vet-clinic
+```
+git clone https://github.com/romans-adi/vet-clinic.git vet-clinic
+```
 
 ### Usage
 
@@ -127,13 +140,17 @@ To create the PostgreSQL database and view its contents, follow the steps below:
 
 3. Run the following command to create the database:
 
-> psql -U <username> -c "CREATE DATABASE <database_name>;"
+```
+psql -U <username> -c "CREATE DATABASE <database_name>;"
+```
 
 Replace <username> with your PostgreSQL username and <database_name> with the desired name for your database.
 
 4. To view the contents of the database, use the following command:
 
-> psql -U <username> -d <database_name> -c "SELECT * FROM <table_name>;"
+```
+psql -U <username> -d <database_name> -c "SELECT * FROM <table_name>;"
+```
 
 Replace <username> with your PostgreSQL username, <database_name> with the name of your database, and <table_name> with the name of the table you want to view.
 
