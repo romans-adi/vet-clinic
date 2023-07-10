@@ -197,7 +197,7 @@ Furthermore, if you would like to get in touch with us, you can find our contact
 
 ## Acknowledgments <a name="acknowledgements"></a>
 
-I would like to express our gratitude to the PostgreSQL community for the development and continuous improvement of the PostgreSQL open-source database management system. [PostgreSQL] (https://www.postgresql.org) has provided a robust and reliable foundation for my project, enabling me to leverage its powerful features and scalability.
+I would like to express our gratitude to the PostgreSQL community for the development and continuous improvement of the PostgreSQL open-source database management system. [PostgreSQL](https://www.postgresql.org) has provided a robust and reliable foundation for my project, enabling me to leverage its powerful features and scalability.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
