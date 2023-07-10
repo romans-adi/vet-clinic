@@ -66,18 +66,15 @@ Determine the appropriate installation method for your operating system. Postgre
 
 1. For Linux:
 
-```sudo apt-get install postgresql
-```
+> sudo apt-get install postgresql
 
 or
 
-```sudo yum install postgresql-server
-```
+> sudo yum install postgresql-server
 
 or
 
-```sudo dnf install postgresql-server postgresql-contrib
-```
+> sudo dnf install postgresql-server postgresql-contrib
 
 Other distributions: Refer to the PostgreSQL documentation or consult your distribution's documentation for installation instructions.
 
@@ -89,8 +86,7 @@ PostgreSQL Installer for Windows: Download the PostgreSQL Installer for Windows 
 
 Homebrew: If you have Homebrew installed, use the following command:
 
-```brew install postgresql
-```
+> brew install postgresql
 
 PostgreSQL for macOS: Download the PostgreSQL package for macOS from the official website and follow the installation instructions.
 
@@ -131,15 +127,13 @@ To create the PostgreSQL database and view its contents, follow the steps below:
 
 3. Run the following command to create the database:
 
-```psql -U <username> -c "CREATE DATABASE <database_name>;"
-```
+> psql -U <username> -c "CREATE DATABASE <database_name>;"
 
 Replace <username> with your PostgreSQL username and <database_name> with the desired name for your database.
 
 4. To view the contents of the database, use the following command:
 
-```psql -U <username> -d <database_name> -c "SELECT * FROM <table_name>;"
-```
+> psql -U <username> -d <database_name> -c "SELECT * FROM <table_name>;"
 
 Replace <username> with your PostgreSQL username, <database_name> with the name of your database, and <table_name> with the name of the table you want to view.
 
@@ -203,7 +197,7 @@ Furthermore, if you would like to get in touch with us, you can find our contact
 
 ## Acknowledgments <a name="acknowledgements"></a>
 
-I would like to express our gratitude to the PostgreSQL community for the development and continuous improvement of the PostgreSQL open-source database management system. PostgreSQL (https://www.postgresql.org) has provided a robust and reliable foundation for my project, enabling me to leverage its powerful features and scalability.
+I would like to express our gratitude to the PostgreSQL community for the development and continuous improvement of the PostgreSQL open-source database management system. [PostgreSQL] (https://www.postgresql.org) has provided a robust and reliable foundation for my project, enabling me to leverage its powerful features and scalability.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
