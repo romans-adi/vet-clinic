@@ -173,8 +173,6 @@ Replace <username> with your PostgreSQL username, <database_name> with the name 
 
 ## Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
 - [ ] **Add new tables & create relations between**
 - [ ] **Database performance audit**
 - [ ] **Add schema diagram**
