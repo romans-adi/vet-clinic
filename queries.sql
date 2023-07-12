@@ -32,4 +32,4 @@ SELECT COUNT(*) AS total_no_escape FROM animals WHERE escape_attempts = 0;
 SELECT TO_CHAR(AVG(weight_kg), 'FM999.009	') AS avg_weight FROM animals;
 SELECT neutered, COUNT(*) AS total_escapes FROM animals WHERE escape_attempts > 0 GROUP BY neutered ORDER BY total_escapes DESC;
 SELECT species, TO_CHAR(MIN(weight_kg), 'FM999.009	') AS min_weight, TO_CHAR(MAX(weight_kg), 'FM999.009') AS max_weight FROM animals GROUP BY species;
-SELECT TO_CHAR(AVG(escape_attempts), 'FM999.009') AS average_escape_attempts FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
+SELECT TO_CHAR(AVG(escape_attempts), 'FM999.009') AS avg_escape_attempts FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
