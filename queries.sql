@@ -50,7 +50,7 @@ SELECT o.full_name, COUNT(a.id) AS animal_count FROM owners AS o LEFT JOIN anima
 
 SELECT a.name FROM animals AS a JOIN visits AS v ON a.id = v.animal_id JOIN vets AS vt ON vt.id = v.vet_id WHERE vt.name = 'William Tatcher' ORDER BY v.visit_date DESC LIMIT 1;
 SELECT COUNT(DISTINCT a.id) AS animal_count FROM animals AS a JOIN visits AS v ON a.id = v.animal_id JOIN vets AS vt ON vt.id = v.vet_id WHERE vt.name = 'Stephanie Mendez';
-SELECT vt.name AS vet_name, s.species_id AS specialization_name FROM vets AS vt LEFT JOIN specializations AS s ON vt.id = s.vet_id ORDER BY vt.name;
+SELECT vt.name AS vet_name, s.species_id AS specialization_id FROM vets AS vt LEFT JOIN specializations AS s ON vt.id = s.vet_id ORDER BY vt.name;
 SELECT a.name AS animals_name FROM animals AS a JOIN visits AS v ON a.id = v.animal_id JOIN vets AS vt ON vt.id = v.vet_id WHERE vt.name = 'Stephanie Mendez' AND v.visit_date BETWEEN '2020-04-01' AND '2020-08-30';
 SELECT a.name AS animal_name, COUNT(*) as visit_count FROM animals AS a JOIN visits AS v ON a.id = v.animal_id GROUP BY a.name ORDER BY COUNT(*) DESC LIMIT 1;
 SELECT a.name AS animal_name FROM animals AS a JOIN visits AS v ON a.id = v.animal_id ORDER BY v.visit_date DESC LIMIT 1;
