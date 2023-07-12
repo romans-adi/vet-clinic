@@ -13,6 +13,8 @@ VALUES ('Charmander', '2020-02-08', 11, false, 0);
 INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts)
 VALUES ('Plantmon', '2021-11-21', 5.7, true, 2);
 INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts)
+VALUES ('Squirtle', '1993-04-02', 3, false, 12.13);
+INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts)
 VALUES ('Angemon', '2005-06-12', 45, true, 0);
 INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts)
 VALUES ('Boarmon', '2005-06-07', 20.4, true, 7);
