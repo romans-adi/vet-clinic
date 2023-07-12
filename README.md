@@ -9,7 +9,7 @@ This project is a database system for a vet clinic. The database includes tables
 <!-- TABLE OF CONTENTS -->
 
 # Table of Contents
-
+ 
 - [Built With](#built-with)
   - [Tech Stack](#tech-stack)
   - [Key Features](#key-features)
