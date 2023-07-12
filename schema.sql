@@ -1,6 +1,6 @@
 /* Database schema to keep the structure of entire database. */
 
-DROP TABLE IF EXISTS animals;
+DROP TABLE IF EXISTS animals CASCADE;
 
 CREATE TABLE animals (
   id SERIAL PRIMARY KEY,
@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS species;
 
 CREATE TABLE species (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(25),
+  name VARCHAR(25)
 );
 
 ALTER TABLE animals DROP COLUMN species;

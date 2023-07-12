@@ -21,7 +21,7 @@ VALUES ('Blossom', '1998-10-13', 17, true, 3);
 INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts)
 VALUES ('Ditto', '2022-05-14', 22, true, 4);
 
-INSERT INTO owners (name, age) VALUES
+INSERT INTO owners (full_name, age) VALUES
 ('Sam Smith', 34),
 ('Jennifer Orwell', 19),
 ('Bob', 45),
@@ -34,8 +34,8 @@ INSERT INTO species (name) VALUES ('Pokemon'), ('Digimon');
 UPDATE animals SET species_id = s.id FROM species AS s WHERE animals.name LIKE '%mon' AND s.name = 'Digimon';
 UPDATE animals SET species_id = s.id FROM species AS s WHERE animals.name NOT LIKE '%mon' AND s.name = 'Pokemon';
 
-UPDATE animals SET owner_id = o.id FROM owners AS o WHERE animals.name = 'Agumon' AND o.name = 'Sam Smith';
-UPDATE animals SET owner_id = o.id FROM owners AS o WHERE animals.name IN ('Gabumon', 'Pikachu') AND o.name = 'Jennifer Orwell';
-UPDATE animals SET owner_id = o.id FROM owners AS o WHERE animals.name IN ('Devimon', 'Plantmon') AND o.name = 'Bob';
-UPDATE animals SET owner_id = o.id FROM owners AS o WHERE animals.name IN ('Charmander', 'Squirtle', 'Blossom') AND o.name = 'Melody Pond';
-UPDATE animals SET owner_id = o.id FROM owners AS o WHERE animals.name IN ('Angemon', 'Boarmon') AND o.name = 'Dean Winchester';
+UPDATE animals SET owner_id = o.id FROM owners AS o WHERE animals.name = 'Agumon' AND o.full_name = 'Sam Smith';
+UPDATE animals SET owner_id = o.id FROM owners AS o WHERE animals.name IN ('Gabumon', 'Pikachu') AND o.full_name = 'Jennifer Orwell';
+UPDATE animals SET owner_id = o.id FROM owners AS o WHERE animals.name IN ('Devimon', 'Plantmon') AND o.full_name = 'Bob';
+UPDATE animals SET owner_id = o.id FROM owners AS o WHERE animals.name IN ('Charmander', 'Squirtle', 'Blossom') AND o.full_name = 'Melody Pond';
+UPDATE animals SET owner_id = o.id FROM owners AS o WHERE animals.name IN ('Angemon', 'Boarmon') AND o.full_name = 'Dean Winchester';
