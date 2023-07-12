@@ -47,3 +47,5 @@ SELECT s.name, COUNT(a.id) AS animal_count FROM species AS s LEFT JOIN animals A
 SELECT a.name FROM animals AS a JOIN species AS s ON a.species_id = s.id JOIN owners AS o ON a.owner_id = o.id WHERE s.name = 'Digimon' AND o.full_name = 'Jennifer Orwell';
 SELECT a.name FROM animals AS a JOIN owners AS o ON a.owner_id = o.id WHERE o.full_name = 'Dean Winchester' AND a.escape_attempts = 0;
 SELECT o.full_name, COUNT(a.id) AS animal_count FROM owners AS o LEFT JOIN animals AS a ON o.id = a.owner_id GROUP BY o.full_name HAVING COUNT(a.id) = (SELECT COUNT(id) FROM animals GROUP BY owner_id ORDER BY COUNT(id) DESC LIMIT 1);
+
+SELECT a.name FROM animals AS a JOIN visits AS v ON a.id = v.animal_id JOIN vets AS vt ON vt.id = v.vet_id WHERE vt.name = 'William Tatcher' ORDER BY v.visit_date DESC LIMIT 1;
