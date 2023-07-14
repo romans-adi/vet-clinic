@@ -1,5 +1,5 @@
-/* Database schema to keep the structure of entire database. */
-
+DROP SCHEMA public CASCADE;
+CREATE SCHEMA public;
 DROP TABLE IF EXISTS animals CASCADE;
 
 CREATE TABLE animals (
@@ -13,7 +13,7 @@ CREATE TABLE animals (
 
 ALTER TABLE animals ADD COLUMN species VARCHAR(25);
 
-DROP TABLE IF EXISTS owners;
+DROP TABLE IF EXISTS owners CASCADE;
 
 CREATE TABLE owners (
   id SERIAL PRIMARY KEY,
@@ -21,7 +21,7 @@ CREATE TABLE owners (
   age INTEGER
 );
 
-DROP TABLE IF EXISTS species;
+DROP TABLE IF EXISTS species CASCADE;
 
 CREATE TABLE species (
   id SERIAL PRIMARY KEY,

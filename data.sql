@@ -1,5 +1,3 @@
-/* Populate database with sample data. */
-
 INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts)
 VALUES ('Agumon', '2020-02-03', 10.23, true, 0);
 INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts)
@@ -80,3 +78,5 @@ VALUES
   ((SELECT id FROM animals WHERE name = 'Boarmon'), (SELECT id FROM vets WHERE name = 'Maisy Smith'), '2020-08-03'),
   ((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'Stephanie Mendez'), '2020-05-24'),
   ((SELECT id FROM animals WHERE name = 'Blossom'), (SELECT id FROM vets WHERE name = 'William Tatcher'), '2021-01-11');
+
+INSERT INTO visits (animal_id, vet_id, visit_date) SELECT a.id, v.id, g.visit_date FROM animals a CROSS JOIN vets v CROSS JOIN generate_series('1980-01-01'::date, '2021-01-01'::date, '1 day') g(visit_date) WHERE NOT EXISTS ( SELECT 1 FROM visits WHERE animal_id = a.id AND vet_id = v.id AND visit_date = g.visit_date);
