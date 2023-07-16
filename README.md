@@ -2,7 +2,7 @@
 
 # <a name="about-project"> 🐖 VetClinic 🐒 </a>
 
-<a href="https://ibb.co/w0HNxL5"><img src="https://i.ibb.co/QbBF1cy/db-queries.png" alt="db-queries" border="0"></a>
+![diagram](https://github.com/romans-adi/vet-clinic/assets/83185550/0792f64a-35d9-421e-876f-538d1bbafdce)
 
 This project is a database system for a vet clinic. The database includes tables to store information about animals, their owners, clinic employees, and visits. The goal is to design a comprehensive database structure that enables efficient management and organization of data related to the clinic's operations and patient care.
 
