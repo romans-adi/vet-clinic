@@ -9,7 +9,7 @@ This project is a database system for a vet clinic. The database includes tables
 <!-- TABLE OF CONTENTS -->
 
 # Table of Contents
- 
+
 - [Built With](#built-with)
   - [Tech Stack](#tech-stack)
   - [Key Features](#key-features)
@@ -37,7 +37,7 @@ This project is a database system for a vet clinic. The database includes tables
 ### Key Features <a name="key-features"></a>
 
 - **Well-structured data**
-- **Autoincrementing IDs**
+- **Queries time reduced by indexing columns (index tables created using the B-tree data structure)**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -173,8 +173,7 @@ Replace <username> with your PostgreSQL username, <database_name> with the name 
 
 ## Future Features <a name="future-features"></a>
 
-- [ ] **Add new tables & create relations between**
-- [ ] **Database performance audit**
+- [ ] **Add new tables medications & procedures**
 - [ ] **Add schema diagram**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
