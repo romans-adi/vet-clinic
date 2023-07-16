@@ -782,7 +782,7 @@ where
 
 DROP INDEX IF EXISTS idx_owners_email;
 
-CREATE INDEX idx_owners_email ON owners (email);
+CREATE INDEX idx_owners_email ON owners (email ASC);
 
 EXPLAIN ANALYZE
 SELECT
