@@ -732,17 +732,9 @@ SELECT
   'Owner ' | | generate_series(1, 25000000),
   'owner_' | | generate_series(1, 25000000) | | '@mail.com';
 
-EXPLAIN ANALYZE
-SELECT
-  COUNT(*)
-FROM
-  visits
-WHERE
-  animal_id = 4;
-
 DROP INDEX IF EXISTS idx_visits_animal_id;
-
-CREATE INDEX idx_visits_animal_id ON visits (animal_id);
+DROP INDEX IF EXISTS idx_visits_vet_id;
+DROP INDEX IF EXISTS idx_owners_email;
 
 EXPLAIN ANALYZE
 SELECT
@@ -751,18 +743,6 @@ FROM
   visits
 WHERE
   animal_id = 4;
-
-EXPLAIN ANALYZE
-SELECT
-  *
-FROM
-  visits
-where
-  vet_id = 2;
-
-DROP INDEX IF EXISTS idx_visits_vet_id;
-
-CREATE INDEX idx_visits_vet_id ON visits (vet_id);
 
 EXPLAIN ANALYZE
 SELECT
@@ -780,9 +760,26 @@ FROM
 where
   email = 'owner_18327@mail.com';
 
-DROP INDEX IF EXISTS idx_owners_email;
 
+CREATE INDEX idx_visits_animal_id ON visits (animal_id);
+CREATE INDEX idx_visits_vet_id ON visits (vet_id);
 CREATE INDEX idx_owners_email ON owners (email ASC);
+
+EXPLAIN ANALYZE
+SELECT
+  COUNT(*)
+FROM
+  visits
+WHERE
+  animal_id = 4;
+
+EXPLAIN ANALYZE
+SELECT
+  *
+FROM
+  visits
+where
+  vet_id = 2;
 
 EXPLAIN ANALYZE
 SELECT

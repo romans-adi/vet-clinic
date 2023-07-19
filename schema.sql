@@ -3,6 +3,8 @@ DROP SCHEMA public CASCADE;
 CREATE SCHEMA public;
 
 DROP TABLE IF EXISTS animals CASCADE;
+DROP TABLE IF EXISTS owners CASCADE;
+DROP TABLE IF EXISTS species CASCADE;
 
 CREATE TABLE animals (
   id SERIAL PRIMARY KEY,
@@ -10,38 +12,19 @@ CREATE TABLE animals (
   date_of_birth DATE,
   escape_attempts INTEGER,
   neutered BOOLEAN,
-  weight_kg DECIMAL(10, 2)
+  weight_kg DECIMAL(10, 2),
+  owner_id INTEGER REFERENCES owners(id),
+  species_id INTEGER REFERENCES species(id)
 );
-
-ALTER TABLE
-  animals
-ADD
-  COLUMN species VARCHAR(25);
-
-DROP TABLE IF EXISTS owners CASCADE;
 
 CREATE TABLE owners (
   id SERIAL PRIMARY KEY,
   full_name VARCHAR(25),
-  age INTEGER
+  age INTEGER,
+  email VARCHAR(120)
 );
 
-DROP TABLE IF EXISTS species CASCADE;
-
 CREATE TABLE species (id SERIAL PRIMARY KEY, name VARCHAR(25));
-
-ALTER TABLE
-  animals DROP COLUMN species;
-
-ALTER TABLE
-  animals
-ADD
-  COLUMN species_id INTEGER REFERENCES species(id);
-
-ALTER TABLE
-  animals
-ADD
-  COLUMN owner_id INTEGER REFERENCES owners(id);
 
 CREATE TABLE vets (
   id SERIAL PRIMARY KEY,
@@ -61,8 +44,3 @@ CREATE TABLE visits (
   vet_id INTEGER REFERENCES vets (id),
   visit_date DATE
 );
-
-ALTER TABLE
-  owners
-ADD
-  COLUMN email VARCHAR(120);
